@@ -25,11 +25,13 @@ js 기본 코드에 사용된 기초 of 기초 지식! 이것만 보고 넘어�
 ### FOV (Field Of View, 시야각)
 - near, far를 숫자범위로 설정하면 그 범위 내에 있는 요소들만 보이게 된다.
 - mesh가 보이려면? near~far 범위에 존재 + fov(시야각) 안에 들어와야 함
+<img width="500" alt="스크린샷 2022-08-03 오후 6 13 41" src="https://user-images.githubusercontent.com/63178953/182571513-d1acc256-de80-490a-b76d-4da39fb48382.png">
 
 ### Camera
 - Perspective Camera: 원근감 반영
 - Orthographic Camera: 원근감 미반영
   - 거리 상관없이 크기 유지 (ex. 롤)
+<img width="500" alt="스크린샷 2022-08-03 오후 6 13 48" src="https://user-images.githubusercontent.com/63178953/182571548-8904973a-b3e1-481a-8e33-ff65244c17a4.png">
 
 
 
