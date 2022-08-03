@@ -7,7 +7,7 @@
 /// <reference lib="dom.asynciterable" />
 /// <reference lib="deno.ns" />
 
-import { Fragment, gfm, h } from "./deps.ts";
+import { gfm, h } from "./deps.ts";
 import type { BlogState, DateStyle, Post } from "./types.d.ts";
 
 const socialAppIcons = new Map([
@@ -35,39 +35,39 @@ export function Index({ state, posts }: IndexProps) {
     <div class="home">
       {state.header || (
         <header
-          class="w-full h-90 lt-sm:h-80 bg-cover bg-center bg-no-repeat"
+          class="w-full h-60 lt-sm:h-90 bg-cover bg-center bg-no-repeat"
           style={{
             backgroundImage: state.cover ? `url(${state.cover})` : undefined,
           }}
         >
           <div class="max-w-screen-sm h-full px-6 mx-auto flex flex-col items-center justify-center">
-            {state.avatar && (
+            {/* {state.avatar && (
               <a
                 href="/"
                 class={[
-                  "bg-cover bg-center bg-no-repeat w-25 h-25 border-4 border-white",
+                  "bg-cover bg-center bg-no-repeat w-20 h-20 border-4 border-white",
                   state.avatarClass ?? "rounded-full",
                 ]
                   .filter(Boolean)
                   .join(" ")}
                 style={{ backgroundImage: `url(${state.avatar})` }}
               />
-            )}
-            <h1
-              class="mt-3 text-4xl text-gray-900 dark:text-gray-100 font-bold"
-              style={{ color: state.coverTextColor }}
-            >
-              {state.title ?? "My Blog"}
-            </h1>
+            )} */}
             {state.description && (
               <p
-                class="text-lg text-gray-600 dark:text-gray-400"
+                class="text-4xl text-gray-900 dark:text-gray-400"
                 style={{ color: state.coverTextColor }}
               >
                 {state.description}
               </p>
             )}
-            {state.links && (
+            <h1
+              class="mt-1 text-5xl text-gray-900 dark:text-gray-100 font-bold"
+              style={{ color: state.coverTextColor }}
+            >
+              {state.title ?? "Blog"}
+            </h1>
+            {/* {state.links && (
               <nav class="mt-3 flex gap-2">
                 {state.links.map((link) => {
                   const url = new URL(link.url);
@@ -98,7 +98,7 @@ export function Index({ state, posts }: IndexProps) {
                   );
                 })}
               </nav>
-            )}
+            )} */}
           </div>
         </header>
       )}
@@ -232,22 +232,8 @@ function Footer(props: { author?: string }) {
     <footer class="mt-20 pb-16 lt-sm:pb-8 lt-sm:mt-16">
       <p class="flex items-center gap-2.5 text-gray-400/800 dark:text-gray-500/800 text-sm">
         <span>
-          &copy; {new Date().getFullYear()} {props.author} &middot; Powered by
-          {" "}
-          <a
-            class="inline-flex items-center gap-1 underline hover:text-gray-800 dark:hover:text-gray-200 transition-colors"
-            href="https://deno.land/x/blog"
-          >
-            Deno Blog
-          </a>
+          &copy; {new Date().getFullYear()} {props.author}
         </span>
-        <a
-          href="/feed"
-          class="inline-flex items-center gap-1 hover:text-gray-800 dark:hover:text-gray-200 transition-colors"
-          title="Atom Feed"
-        >
-          <IconRssFeed /> RSS
-        </a>
       </p>
     </footer>
   );
@@ -304,20 +290,6 @@ function Tags({ tags }: { tags?: string[] }) {
       </section>
     )
     : null;
-}
-
-function IconRssFeed() {
-  return (
-    <svg
-      class="inline-block w-4 h-4"
-      viewBox="0 0 20 20"
-      fill="currentColor"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path d="M5 3a1 1 0 000 2c5.523 0 10 4.477 10 10a1 1 0 102 0C17 8.373 11.627 3 5 3z" />
-      <path d="M4 9a1 1 0 011-1 7 7 0 017 7 1 1 0 11-2 0 5 5 0 00-5-5 1 1 0 01-1-1zM3 15a2 2 0 114 0 2 2 0 01-4 0z" />
-    </svg>
-  );
 }
 
 function IconEmail() {
