@@ -1,13 +1,12 @@
 import blog, { ga, redirects } from "https://deno.land/x/blog@0.3.3/blog.tsx";
 
 blog({
-  title: "Ryan Dahl",
-  author: "Ryan Dahl",
+  title: "Blog",
+  author: "jooing",
   avatar: "./ry.jpg",
   avatarClass: "full",
   links: [
-    { title: "Email", url: "mailto:ry@tinyclouds.org" },
-    { title: "GitHub", url: "https://github.com/ry" },
+    { title: "GitHub", url: "https://github.com/juhye-kim" },
   ],
   background: "#fff",
   middlewares: [
