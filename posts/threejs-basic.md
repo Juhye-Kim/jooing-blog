@@ -2,7 +2,6 @@
 title: three.js 기초 of 기초
 publish_date: 2022-08-02
 background: white
-cover_html: <img src="space/milkyway.jpeg" />
 ---
 
 js 기본 코드에 사용된 기초 of 기초 지식! 이것만 보고 넘어가자.
