@@ -1,6 +1,6 @@
 ---
 title: three.js 기초 of 기초
-publish_date: 2022-08-02
+publish_date: 2022-08-01
 background: white
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: three.js로 태양계 만들기 - 1편
-publish_date: 2022-08-03
+publish_date: 2022-08-02
 background: white
 cover_html: <img src="space/milkyway.jpeg" />
 ---
